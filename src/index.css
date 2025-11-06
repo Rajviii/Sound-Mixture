@@ -1,5 +1,53 @@
 @import "tailwindcss";
 
-:root{
-    background-color: blanchedalmond;
+@layer base {
+  body {
+    @apply transition-colors duration-300;
+  }
+
+  input[type="range"].slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f97316, #ec4899);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .dark input[type="range"].slider::-webkit-slider-thumb {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  }
+
+  input[type="range"].slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
+  }
+
+  .dark input[type="range"].slider::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  }
+
+  input[type="range"].slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f97316, #ec4899);
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s;
+  }
+
+  .dark input[type="range"].slider::-moz-range-thumb {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  }
+
+  input[type="range"].slider::-moz-range-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
+  }
+
+  .dark input[type="range"].slider::-moz-range-thumb:hover {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  }
 }
